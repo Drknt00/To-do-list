@@ -1,0 +1,28 @@
+# Basic to do list
+
+todo = []
+
+while True:
+    # print the options to the user
+    print('1: Show content')
+    print('2: Add an item to list')
+    print('3: Remove item from the list')
+    print('4: Quit')
+    # prompt the user
+    option = input('Choose option: ')
+
+    if option == '1':
+        for idx, item in enumerate(todo):
+            print(idx, item)
+    elif option == '2':
+        item = input('Add item to list: ')
+        todo.append(item)
+    elif option == '3':
+        idx_str = input('What item to remove  (use index): ')
+        idx = int(idx_str)
+        todo.pop(idx)
+    elif option == '4':
+        print('Goodbye')
+        break
+    else:
+        print('Not understood')
